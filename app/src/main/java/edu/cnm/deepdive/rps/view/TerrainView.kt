@@ -164,10 +164,8 @@ class TerrainView : View {
     }
 
     private fun stopUpdater() {
-        if (updater != null) {
-            updater!!.setRunning(false)
-            updater = null
-        }
+        updater?.setRunning(false)
+        updater = null
     }
 
     private inner class Updater : Thread() {
